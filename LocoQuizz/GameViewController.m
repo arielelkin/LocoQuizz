@@ -111,7 +111,7 @@
     NSString *wrongChoiceOne = [self.venuesDict valueForKey:[venueNames objectAtIndex:arc4random()%venueNames.count]];
     NSString *wrongChoiceTwo = [self.venuesDict valueForKey:[venueNames objectAtIndex:arc4random()%venueNames.count]];
     
-    NSLog(@"%@ is a %@ but not a %@ nor a %@", self.currentVenue, [self.venuesDict valueForKey:self.currentVenue], wrongChoiceTwo, wrongChoiceTwo);
+    NSLog(@"%@ is a %@ but not a %@ nor a %@", self.currentVenue, [self.venuesDict valueForKey:self.currentVenue], wrongChoiceOne, wrongChoiceTwo);
     
     //update the UI
     self.questionLabel.text = [NSString stringWithFormat:@"What is %@?", self.currentVenue];
