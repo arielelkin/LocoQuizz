@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02998D81721933B00A0ED38 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998CA1721933B00A0ED38 /* icon.png */; };
+		B02998D91721933B00A0ED38 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998CB1721933B00A0ED38 /* icon@2x.png */; };
+		B02998DA1721933B00A0ED38 /* notbad.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998CD1721933B00A0ED38 /* notbad.png */; };
+		B02998DB1721933B00A0ED38 /* notbad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998CE1721933B00A0ED38 /* notbad@2x.png */; };
+		B02998DC1721933B00A0ED38 /* wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998CF1721933B00A0ED38 /* wrong.png */; };
+		B02998DD1721933B00A0ED38 /* wrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998D01721933B00A0ED38 /* wrong@2x.png */; };
+		B02998E11721933B00A0ED38 /* Default.psd in Resources */ = {isa = PBXBuildFile; fileRef = B02998D61721933B00A0ED38 /* Default.psd */; };
+		B02998E21721933B00A0ED38 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = B02998D71721933B00A0ED38 /* icon */; };
+		B02998E71721938D00A0ED38 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998E61721938D00A0ED38 /* Default-568h@2x.png */; };
+		B02998E91721938F00A0ED38 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998E81721938F00A0ED38 /* Default.png */; };
+		B02998EB1721939400A0ED38 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02998EA1721939400A0ED38 /* Default@2x.png */; };
 		B0A3EFFC16B6003300198DC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A3EFFB16B6003300198DC2 /* UIKit.framework */; };
 		B0A3EFFE16B6003300198DC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A3EFFD16B6003300198DC2 /* Foundation.framework */; };
 		B0A3F00016B6003300198DC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A3EFFF16B6003300198DC2 /* CoreGraphics.framework */; };
 		B0A3F00616B6003300198DC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0A3F00416B6003300198DC2 /* InfoPlist.strings */; };
 		B0A3F00816B6003300198DC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F00716B6003300198DC2 /* main.m */; };
 		B0A3F00C16B6003300198DC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F00B16B6003300198DC2 /* AppDelegate.m */; };
-		B0A3F00E16B6003300198DC2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A3F00D16B6003300198DC2 /* Default.png */; };
-		B0A3F01016B6003300198DC2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A3F00F16B6003300198DC2 /* Default@2x.png */; };
-		B0A3F01216B6003300198DC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A3F01116B6003300198DC2 /* Default-568h@2x.png */; };
 		B0A3F01516B6003300198DC2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A3F01316B6003300198DC2 /* MainStoryboard.storyboard */; };
 		B0A3F01816B6003300198DC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F01716B6003300198DC2 /* ViewController.m */; };
 		B0A3F02016B6042200198DC2 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F01F16B6042200198DC2 /* GameViewController.m */; };
@@ -24,6 +32,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B02998CA1721933B00A0ED38 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B02998CB1721933B00A0ED38 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		B02998CD1721933B00A0ED38 /* notbad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notbad.png; sourceTree = "<group>"; };
+		B02998CE1721933B00A0ED38 /* notbad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notbad@2x.png"; sourceTree = "<group>"; };
+		B02998CF1721933B00A0ED38 /* wrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong.png; sourceTree = "<group>"; };
+		B02998D01721933B00A0ED38 /* wrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrong@2x.png"; sourceTree = "<group>"; };
+		B02998D61721933B00A0ED38 /* Default.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Default.psd; sourceTree = "<group>"; };
+		B02998D71721933B00A0ED38 /* icon */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon; sourceTree = "<group>"; };
+		B02998E61721938D00A0ED38 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B02998E81721938F00A0ED38 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B02998EA1721939400A0ED38 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B0A3EFF716B6003300198DC2 /* LocoQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocoQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A3EFFB16B6003300198DC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0A3EFFD16B6003300198DC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,9 +81,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02998C81721933B00A0ED38 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B02998C91721933B00A0ED38 /* Icons */,
+				B02998CC1721933B00A0ED38 /* Images */,
+				B02998D51721933B00A0ED38 /* PSDs */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B02998C91721933B00A0ED38 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B02998CA1721933B00A0ED38 /* icon.png */,
+				B02998CB1721933B00A0ED38 /* icon@2x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		B02998CC1721933B00A0ED38 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B02998CD1721933B00A0ED38 /* notbad.png */,
+				B02998CE1721933B00A0ED38 /* notbad@2x.png */,
+				B02998CF1721933B00A0ED38 /* wrong.png */,
+				B02998D01721933B00A0ED38 /* wrong@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B02998D51721933B00A0ED38 /* PSDs */ = {
+			isa = PBXGroup;
+			children = (
+				B02998D61721933B00A0ED38 /* Default.psd */,
+				B02998D71721933B00A0ED38 /* icon */,
+			);
+			path = PSDs;
+			sourceTree = "<group>";
+		};
 		B0A3EFEC16B6003300198DC2 = {
 			isa = PBXGroup;
 			children = (
+				B02998EA1721939400A0ED38 /* Default@2x.png */,
+				B02998E81721938F00A0ED38 /* Default.png */,
+				B02998E61721938D00A0ED38 /* Default-568h@2x.png */,
+				B02998C81721933B00A0ED38 /* Assets */,
 				B0A3F02116B604A700198DC2 /* CoreLocation.framework */,
 				B0A3F00116B6003300198DC2 /* LocoQuizz */,
 				B0A3EFFA16B6003300198DC2 /* Frameworks */,
@@ -173,10 +235,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A3F00616B6003300198DC2 /* InfoPlist.strings in Resources */,
-				B0A3F00E16B6003300198DC2 /* Default.png in Resources */,
-				B0A3F01016B6003300198DC2 /* Default@2x.png in Resources */,
-				B0A3F01216B6003300198DC2 /* Default-568h@2x.png in Resources */,
 				B0A3F01516B6003300198DC2 /* MainStoryboard.storyboard in Resources */,
+				B02998D81721933B00A0ED38 /* icon.png in Resources */,
+				B02998D91721933B00A0ED38 /* icon@2x.png in Resources */,
+				B02998DA1721933B00A0ED38 /* notbad.png in Resources */,
+				B02998DB1721933B00A0ED38 /* notbad@2x.png in Resources */,
+				B02998DC1721933B00A0ED38 /* wrong.png in Resources */,
+				B02998DD1721933B00A0ED38 /* wrong@2x.png in Resources */,
+				B02998E11721933B00A0ED38 /* Default.psd in Resources */,
+				B02998E21721933B00A0ED38 /* icon in Resources */,
+				B02998E71721938D00A0ED38 /* Default-568h@2x.png in Resources */,
+				B02998E91721938F00A0ED38 /* Default.png in Resources */,
+				B02998EB1721939400A0ED38 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
