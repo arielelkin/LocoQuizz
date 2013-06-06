@@ -88,6 +88,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		B06F93401760CEAD00A33C53 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B0A3F02316B608DB00198DC2 /* LocoQuizzAdditions.h */,
+				B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
 		B0A3EFEC16B6003300198DC2 = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +141,7 @@
 				B0A3F01716B6003300198DC2 /* ViewController.m */,
 				B0A3F01E16B6042200198DC2 /* GameViewController.h */,
 				B0A3F01F16B6042200198DC2 /* GameViewController.m */,
-				B0A3F02316B608DB00198DC2 /* LocoQuizzAdditions.h */,
-				B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */,
+				B06F93401760CEAD00A33C53 /* Additions */,
 				B0A3F00216B6003300198DC2 /* Supporting Files */,
 			);
 			path = LocoQuizz;
