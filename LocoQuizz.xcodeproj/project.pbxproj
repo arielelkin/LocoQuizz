@@ -26,7 +26,7 @@
 		B0A3F01816B6003300198DC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F01716B6003300198DC2 /* ViewController.m */; };
 		B0A3F02016B6042200198DC2 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F01F16B6042200198DC2 /* GameViewController.m */; };
 		B0A3F02216B604A700198DC2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A3F02116B604A700198DC2 /* CoreLocation.framework */; };
-		B0A3F02516B608DB00198DC2 /* GameContentFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F02416B608DB00198DC2 /* GameContentFetcher.m */; };
+		B0A3F02516B608DB00198DC2 /* LocoQuizzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +58,8 @@
 		B0A3F01E16B6042200198DC2 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		B0A3F01F16B6042200198DC2 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		B0A3F02116B604A700198DC2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		B0A3F02316B608DB00198DC2 /* GameContentFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameContentFetcher.h; sourceTree = "<group>"; };
-		B0A3F02416B608DB00198DC2 /* GameContentFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameContentFetcher.m; sourceTree = "<group>"; };
+		B0A3F02316B608DB00198DC2 /* LocoQuizzAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocoQuizzAdditions.h; sourceTree = "<group>"; };
+		B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocoQuizzAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 				B0A3F01716B6003300198DC2 /* ViewController.m */,
 				B0A3F01E16B6042200198DC2 /* GameViewController.h */,
 				B0A3F01F16B6042200198DC2 /* GameViewController.m */,
-				B0A3F02316B608DB00198DC2 /* GameContentFetcher.h */,
-				B0A3F02416B608DB00198DC2 /* GameContentFetcher.m */,
+				B0A3F02316B608DB00198DC2 /* LocoQuizzAdditions.h */,
+				B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */,
 				B0A3F00216B6003300198DC2 /* Supporting Files */,
 			);
 			path = LocoQuizz;
@@ -229,7 +229,7 @@
 				B0A3F00C16B6003300198DC2 /* AppDelegate.m in Sources */,
 				B0A3F01816B6003300198DC2 /* ViewController.m in Sources */,
 				B0A3F02016B6042200198DC2 /* GameViewController.m in Sources */,
-				B0A3F02516B608DB00198DC2 /* GameContentFetcher.m in Sources */,
+				B0A3F02516B608DB00198DC2 /* LocoQuizzAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

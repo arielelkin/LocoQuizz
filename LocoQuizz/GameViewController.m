@@ -7,7 +7,6 @@
 //
 
 #import "GameViewController.h"
-#import "GameContentFetcher.h"
 
 @interface GameViewController ()
 
@@ -44,7 +43,7 @@
     //make our query string
     NSString *queryString = [NSString stringWithFormat:@"?ll=%f,%f", self.userLocation.latitude, self.userLocation.longitude];
 
-    //add teh API Keys
+    //add the API Keys
     NSString *apiKeyString = [NSString stringWithFormat:@"&client_id=CPG1OA2FD0OE43PLES4MFOK133GSJADXF3DUMLO4CG0TKOEV&client_secret=30UCWAOGHIVF1C3MSUQ1RNPEUBKO20S01DQCWUQ0LEKCNE4D&v=20130126"];
     
     //concatenate all strings:
@@ -61,10 +60,10 @@
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                
                                NSError *jsonReadingError = nil;
-                               NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data
-                                                                                           options:kNilOptions error:&jsonReadingError];
+                               NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonReadingError];
                                
-//                               NSLog(@"got: %@", json);
+                               NSLog(@"got: %@", json);
+                               if (jsonReadingError) NSLog(@"Problems reading JSON: %@", jsonReadingError.description);
                                
                                //get the venue data and send it to createVenuesDict
                                NSDictionary *foursquareResponse = [json valueForKey:@"response"];
@@ -84,7 +83,6 @@
     for(NSDictionary *singleVenue in allVenues){
         NSArray *categories = [singleVenue valueForKey:@"categories"];
         if(categories){
-//            NSLog(@"%@ - %@", [venue valueForKey:@"name"], [categories valueForKey:@"name"][0]);
             [self.venuesDict setValue:[categories valueForKey:@"name"][0] forKey:[singleVenue valueForKey:@"name"]];
         }
     }
@@ -142,57 +140,6 @@
     
     //go to the next question!
     [self performSelector:@selector(nextQuestion) withObject:nil afterDelay:1];
-    
-}
-
-
-
-#pragma mark -
-#pragma mark Decorations
-
-//It's better to have another class do the networking, so ask GameContentFetcher for the data!
-
--(void)fetchGameContent_LONG{
-    
-    [GameContentFetcher fetchVenuesNear:self.userLocation completionBlock:^(NSJSONSerialization *json, NSError *error) {
-        //        NSLog(@"JSON: %@", json);
-        NSDictionary *response = [json valueForKey:@"response"];
-        NSArray *venues = [response valueForKey:@"venues"];
-        for(id venue in venues){
-            NSArray *categories = [venue valueForKey:@"categories"];
-            if(categories){
-                NSLog(@"%@ - %@", [venue valueForKey:@"name"], [[categories valueForKey:@"name"] firstObject]);
-            }
-        }
-    }];
-    
-}
-
-//Maybe display an image? 
--(void)displayImageForVenueOfType:(NSString *)venueType{
-    
-    NSString *requestString = [NSString stringWithFormat:@"http://www.reddit.com/search.json?q=site:imgur.com+%@", [venueType stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-    NSLog(@"request string: %@", requestString);
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestString]];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               
-                               NSError *jsonReadingError = nil;
-                               NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data
-                                                                                           options:kNilOptions error:&jsonReadingError];
-                               
-                               //                               NSLog(@"got: %@", json);
-                               NSDictionary *redditResponse = [json valueForKey:@"data"];
-                               NSArray *resultList = [redditResponse valueForKey:@"children"];
-                               NSDictionary *result = [resultList objectAtIndex:0];
-                               NSString *url = [[result valueForKey:@"data"] valueForKey:@"url"];
-                               NSLog(@"image at %@", url);
-                               
-                           }
-     ];
     
 }
 

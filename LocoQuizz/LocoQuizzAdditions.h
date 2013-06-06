@@ -1,5 +1,5 @@
 //
-//  GameContentFetcher.h
+//  LocoQuizzAdditions.h
 //  LocoQuizz
 //
 //  Created by Ariel Elkin on 28/01/2013.
@@ -12,15 +12,10 @@
 typedef void (^FourSquareSearchCompletionBlock)(NSJSONSerialization *json, NSError *error);
 
 
-@interface GameContentFetcher : NSObject
+@interface LocoQuizzAdditions : NSObject
 
 +(void)fetchVenuesNear:(CLLocationCoordinate2D)currentLocation completionBlock:(FourSquareSearchCompletionBlock)completionBlock;
 
-//+(UIImage *)fetchImageForName:(NSString *)name;
-//+(NSArray *)fetchTweetsForVenue:(NSString *)name;
-//
-//+(UIImage *)fetchHappyImage;
-//+(UIImage *)fetchSadImage;
-
+-(void)displayImageForVenueOfType:(NSString *)venueType;
 
 @end

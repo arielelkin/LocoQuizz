@@ -1,18 +1,18 @@
 //
-//  GameContentFetcher.m
+//  LocoQuizzAdditions.m
 //  LocoQuizz
 //
 //  Created by Ariel Elkin on 28/01/2013.
 //  Copyright (c) 2013 ariel. All rights reserved.
 //
 
-#import "GameContentFetcher.h"
+#import "LocoQuizzAdditions.h"
 
 #define kFourSquareClientID @"CPG1OA2FD0OE43PLES4MFOK133GSJADXF3DUMLO4CG0TKOEV"
 #define kFourSquareClientSecret @"30UCWAOGHIVF1C3MSUQ1RNPEUBKO20S01DQCWUQ0LEKCNE4D"
 
 
-@implementation GameContentFetcher
+@implementation LocoQuizzAdditions
 
 +(void)fetchVenuesNear:(CLLocationCoordinate2D)currentLocation completionBlock:(FourSquareSearchCompletionBlock)completionBlock{
     
@@ -43,26 +43,33 @@
      ];
 }
 
+-(void)displayImageForVenueOfType:(NSString *)venueType{
+    
+    NSString *requestString = [NSString stringWithFormat:@"http://www.reddit.com/search.json?q=site:imgur.com+%@", [venueType stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    NSLog(@"request string: %@", requestString);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestString]];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               
+                               NSError *jsonReadingError = nil;
+                               NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                                           options:kNilOptions error:&jsonReadingError];
+                               
+                               //                               NSLog(@"got: %@", json);
+                               NSDictionary *redditResponse = [json valueForKey:@"data"];
+                               NSArray *resultList = [redditResponse valueForKey:@"children"];
+                               NSDictionary *result = [resultList objectAtIndex:0];
+                               NSString *url = [[result valueForKey:@"data"] valueForKey:@"url"];
+                               NSLog(@"image at %@", url);
+                               
+                           }
+     ];
+    
+}
 
-//-(UIImage *)fetchImageForName:(NSString *)name;
-//-(NSArray *)fetchTweetsForVenue:(NSString *)name;
-//
-//-(UIImage *)fetchHappyImage;
-//-(UIImage *)fetchSadImage;
-
-
-//static MyClass *gInstance = NULL;
-//
-//+ (MyClass *)instance
-//{
-//    @synchronized(self)
-//    {
-//        if (gInstance == NULL)
-//            gInstance = [[self alloc] init];
-//    }
-//    
-//    return(gInstance);
-//}
 
 @end
 
