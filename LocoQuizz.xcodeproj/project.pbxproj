@@ -25,7 +25,6 @@
 		B0A3F01516B6003300198DC2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A3F01316B6003300198DC2 /* MainStoryboard.storyboard */; };
 		B0A3F01816B6003300198DC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F01716B6003300198DC2 /* ViewController.m */; };
 		B0A3F02016B6042200198DC2 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F01F16B6042200198DC2 /* GameViewController.m */; };
-		B0A3F02216B604A700198DC2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A3F02116B604A700198DC2 /* CoreLocation.framework */; };
 		B0A3F02516B608DB00198DC2 /* LocoQuizzAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		B0A3F01716B6003300198DC2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B0A3F01E16B6042200198DC2 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		B0A3F01F16B6042200198DC2 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		B0A3F02116B604A700198DC2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B0A3F02316B608DB00198DC2 /* LocoQuizzAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocoQuizzAdditions.h; sourceTree = "<group>"; };
 		B0A3F02416B608DB00198DC2 /* LocoQuizzAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocoQuizzAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A3F02216B604A700198DC2 /* CoreLocation.framework in Frameworks */,
 				B0A3EFFC16B6003300198DC2 /* UIKit.framework in Frameworks */,
 				B0A3EFFE16B6003300198DC2 /* Foundation.framework in Frameworks */,
 				B0A3F00016B6003300198DC2 /* CoreGraphics.framework in Frameworks */,
@@ -106,7 +103,6 @@
 				B02998E81721938F00A0ED38 /* Default.png */,
 				B02998E61721938D00A0ED38 /* Default-568h@2x.png */,
 				B02998C81721933B00A0ED38 /* Assets */,
-				B0A3F02116B604A700198DC2 /* CoreLocation.framework */,
 				B0A3F00116B6003300198DC2 /* LocoQuizz */,
 				B0A3EFFA16B6003300198DC2 /* Frameworks */,
 				B0A3EFF816B6003300198DC2 /* Products */,
@@ -316,6 +312,7 @@
 		B0A3F01C16B6003300198DC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocoQuizz/LocoQuizz-Prefix.pch";
 				INFOPLIST_FILE = "LocoQuizz/LocoQuizz-Info.plist";
@@ -327,6 +324,7 @@
 		B0A3F01D16B6003300198DC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocoQuizz/LocoQuizz-Prefix.pch";
 				INFOPLIST_FILE = "LocoQuizz/LocoQuizz-Info.plist";
