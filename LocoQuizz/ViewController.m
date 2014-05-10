@@ -11,6 +11,9 @@
 
 @import CoreLocation;
 
+@interface ViewController() <CLLocationManagerDelegate>
+@end
+
 @implementation ViewController {
     CLLocationManager *locationManager;
     CLLocationCoordinate2D myCoordinate;
@@ -22,10 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     locationManager = [[CLLocationManager alloc] init];
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    [locationManager setDelegate:self];
+    locationManager.delegate = self;
     [locationManager startUpdatingLocation];
 
 }
@@ -33,15 +36,16 @@
 #pragma mark 2
 #pragma mark Add Location Manager Delegate methods
 
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *lastLocation = [locations lastObject];
     myCoordinate = [lastLocation coordinate];
-    NSLog(@"new location: %f, %f", myCoordinate.latitude, myCoordinate.longitude);
     [locationManager stopUpdatingLocation];
-    [startGameButton setEnabled:YES];
+    startGameButton.enabled = YES;
+
+    NSLog(@"location: %f, %f", myCoordinate.latitude, myCoordinate.longitude);
 }
 
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     NSLog(@"location manager error: %@", error.description);
 }
 

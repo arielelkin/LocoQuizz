@@ -9,17 +9,17 @@
 #import "GameViewController.h"
 
 @implementation GameViewController {
-    
-    int correctAnswersCount;
-
-    NSMutableDictionary *venuesDict;
-    NSString *currentVenue;
 
     IBOutlet UILabel *questionLabel;
     IBOutlet UIButton *buttonOne;
     IBOutlet UIButton *buttonTwo;
     IBOutlet UIButton *buttonThree;
     IBOutlet UILabel *resultLabel;
+
+    int correctAnswersCount;
+
+    NSMutableDictionary *venuesDict;
+    NSString *currentVenue;
 }
 
 - (void)viewDidLoad {
