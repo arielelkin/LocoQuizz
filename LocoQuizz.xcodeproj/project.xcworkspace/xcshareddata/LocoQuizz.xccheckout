@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>501411BF-4F73-44F4-8A67-B39024F6ECA8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LocoQuizz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1F79FAD4-C41A-4F16-879A-CFE7AF3D9B34</key>
+		<string>ssh://github.com/arielelkin/LocoQuizz.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LocoQuizz.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1F79FAD4-C41A-4F16-879A-CFE7AF3D9B34</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/arielelkin/LocoQuizz.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1F79FAD4-C41A-4F16-879A-CFE7AF3D9B34</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1F79FAD4-C41A-4F16-879A-CFE7AF3D9B34</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LocoQuizz</string>
+		</dict>
+	</array>
+</dict>
+</plist>

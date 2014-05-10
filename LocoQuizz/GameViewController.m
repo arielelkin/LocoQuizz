@@ -82,7 +82,7 @@
     //Only get the venues' names and categories
     for(NSDictionary *singleVenue in allVenues){
         NSArray *categories = [singleVenue valueForKey:@"categories"];
-        if(categories){
+        if(categories.count > 0){
             [self.venuesDict setValue:[categories valueForKey:@"name"][0] forKey:[singleVenue valueForKey:@"name"]];
         }
     }
