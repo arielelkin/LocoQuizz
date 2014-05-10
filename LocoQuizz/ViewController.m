@@ -9,57 +9,54 @@
 #import "ViewController.h"
 #import "GameViewController.h"
 
-@interface ViewController ()
+@import CoreLocation;
 
-@property CLLocationManager *locationManager;
-@property CLLocationCoordinate2D myCoordinate;
-
-@property IBOutlet UIButton *startGameButton;
-
-@end
-
-@implementation ViewController
+@implementation ViewController {
+    CLLocationManager *locationManager;
+    CLLocationCoordinate2D myCoordinate;
+    IBOutlet UIButton *startGameButton;
+}
 
 #pragma mark 1
 #pragma mark Init Location Manager
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    [self.locationManager setDelegate:self];
-    [self.locationManager startUpdatingLocation];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    [locationManager setDelegate:self];
+    [locationManager startUpdatingLocation];
 
 }
 
 #pragma mark 2
 #pragma mark Add Location Manager Delegate methods
 
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *lastLocation = [locations lastObject];
-    self.myCoordinate = [lastLocation coordinate];
-    NSLog(@"new location: %f, %f", self.myCoordinate.latitude, self.myCoordinate.longitude);
-    [self.locationManager stopUpdatingLocation];
-    [self.startGameButton setEnabled:YES];
+    myCoordinate = [lastLocation coordinate];
+    NSLog(@"new location: %f, %f", myCoordinate.latitude, myCoordinate.longitude);
+    [locationManager stopUpdatingLocation];
+    [startGameButton setEnabled:YES];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     NSLog(@"location manager error: %@", error.description);
 }
 
+
 #pragma mark 3
 #pragma mark Segue
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Going into game!");
     GameViewController *gameVC = [segue destinationViewController];
-    [gameVC setUserLocation:self.myCoordinate];
+    [gameVC setUserLocation:myCoordinate];
     
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
