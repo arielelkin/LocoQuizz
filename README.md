@@ -1,8 +1,10 @@
 LocoQuizz
 =========
 
-This app is the completed tutorial for the [Intro to iOS Course](http://generalassemb.ly/education/502/intro-to-ios-development/812) at London's [General Assembly](http://generalassemb.ly/locations/london).
+This app is the completed tutorial for Ariel's Intro to iOS Course.
 
-Find the tutorial [here](http://arivibes.com/locoquizz-tutorial/).
+Taught at London's [General Assembly](https://generalassemb.ly/london) and [NYC Resistor](http://www.nycresistor.com/).
+
+Find the tutorial [here](http://arielelkin.github.io/iosworkshop/).
 
 Let's test your knowledge of nearby venues!
