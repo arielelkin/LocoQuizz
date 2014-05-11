@@ -11,6 +11,10 @@
 
 @import CoreLocation;
 
+//This View Controller welcomes the user, and fetches his current location.
+//Once the location is fetched, it enables the startGameButton thus letting
+//the user go into GameViewController and start the game. 
+
 @interface ViewController() <CLLocationManagerDelegate>
 @end
 
@@ -19,9 +23,6 @@
     CLLocationCoordinate2D myCoordinate;
     IBOutlet UIButton *startGameButton;
 }
-
-#pragma mark 1
-#pragma mark Init Location Manager
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,9 +33,6 @@
     [locationManager startUpdatingLocation];
 
 }
-
-#pragma mark 2
-#pragma mark Add Location Manager Delegate methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *lastLocation = [locations lastObject];
@@ -50,19 +48,11 @@
 }
 
 
-#pragma mark 3
-#pragma mark Segue
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Going into game!");
     GameViewController *gameVC = [segue destinationViewController];
     [gameVC setUserLocation:myCoordinate];
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

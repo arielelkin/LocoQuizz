@@ -8,6 +8,9 @@
 
 #import "GameViewController.h"
 
+//This View Controller is where the user will play the game.
+//It handles all data fetches and game logic.
+
 @implementation GameViewController {
 
     IBOutlet UILabel *questionLabel;
@@ -63,7 +66,6 @@
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [self createVenuesDict:venues];
             }];
-
         }
     }];
 
